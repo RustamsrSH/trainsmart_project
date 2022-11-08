@@ -1,5 +1,4 @@
-I plan to make a SPA to find trainers.
-Suggested technology stack: ReactJS, NodeJS, MongoDB.
+
 At the moment the project is under development.
 
 ![trainsmart](https://user-images.githubusercontent.com/113888012/191192767-05d1f070-812b-4248-831f-8a4dc00e37e3.jpg)
