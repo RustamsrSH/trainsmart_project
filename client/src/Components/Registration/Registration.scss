@@ -1,0 +1,56 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.reg-form {
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  padding-top: 25px;
+}
+
+.reg-form__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reg-form__col1,
+.reg-form__col2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reg-form__col3 {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+span {
+  position: absolute;
+  top: -12px;
+  left: 15px;
+
+  padding-right: 5px;
+  padding-left: 5px;
+
+  background-color: #fff;
+}
+
+input,
+select {
+  width: 250px;
+  height: 45px;
+
+  padding-right: 30px;
+  padding-left: 30px;
+
+  border-radius: 5px;
+}

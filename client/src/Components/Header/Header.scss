@@ -1,0 +1,35 @@
+.header {
+  background-color: #15374A;
+  color: #fff;
+
+  margin-bottom: 65px;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+  width: 350px;
+}
+
+.nav__item {
+  color: #fff;
+
+  &:hover {
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
+
+.header__mail {
+  text-decoration: none;
+  color: #fff;
+}
