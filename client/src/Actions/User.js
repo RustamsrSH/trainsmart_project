@@ -1,8 +1,10 @@
 import axios from "axios";
 
-export const registration = async (email, password) => {
+export const registration = async (firstName, secondName, email, password) => {
   try {
     const response = await axios.post('http://localhost:5000/auth/registration', {
+      firstName,
+      secondName,
       email,
       password
     })

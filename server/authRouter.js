@@ -4,7 +4,8 @@ const controller = require('./authController');
 const {check} = require('express-validator');
 
 router.post('/registration', [
-  // check('username' , 'Имя пользователя не может быть пустым').notEmpty(),
+  check('firstName' , 'Имя пользователя не может быть пустым').notEmpty(),
+  check('secondName' , 'Имя пользователя не может быть пустым').notEmpty(),
   check('email' , 'Поле не может быть пустым').notEmpty(),
   check('password', 'Пароль должен быть больше 4 и меньше 10 символов').isLength({min:4, max:10})
 ], controller.registration);

@@ -21,14 +21,14 @@ class authController {
       if (!errors.isEmpty()) {
         return res.status(400).json({message: 'Ошибка при регистрации.', errors});
       }
-      const {email, password} = req.body;
+      const {firstName, secondName, email, password} = req.body;
       const candidate = await User.findOne({email});
       if (candidate) {
         return res.status(400).json({message: 'Пользователь с такой почтой уже существует.'});
       }
       const hashPassword = bcrypt.hashSync(password, 7);
       const userRole = await Role.findOne({value: 'USER'});
-      const user = new User({email, password: hashPassword, roles: [userRole.value]});
+      const user = new User({firstName, secondName, email, password: hashPassword, roles: [userRole.value]});
       await user.save();
       return res.json({message: 'Пользователь был успешно зарегистрирован.'});
     } catch (e) {

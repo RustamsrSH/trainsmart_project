@@ -6,6 +6,8 @@ import "./Registration.scss";
 const Registraition = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [secondName, setSecondName] = useState('');
 
   return (
     <div>
@@ -14,10 +16,11 @@ const Registraition = () => {
           <legend>Регистрация профия тренера</legend>
           <div className="reg-form__wrapper">
             <div className="reg-form__col1">
-              {/* <label>
+              <label>
                 <span>Имя</span>
-                <input type="text" placeholder='Введите ваше имя'></input>
+                <Input value={firstName} setValue={setFirstName} type="text" placeholder='Введите имя' />
               </label>
+              {/* 
               <label>
                 <span>Номер телефона</span>
                 <input type="tel" placeholder='Введите номер телефона'></input>
@@ -45,10 +48,10 @@ const Registraition = () => {
             </div>
 
             <div className="reg-form__col2">
-              {/* <label>
+              <label>
                 <span>Фамилия</span>
-                <input type="text" placeholder='Введите фамилию'></input>
-              </label> */}
+                <Input value={secondName} setValue={setSecondName} type="text" placeholder='Введите фамилию' />
+              </label>
               <label>
                 <span>Электронный адрес</span>
                 <Input value={email} setValue={setEmail} type="mail" placeholder='Введите почту'/>
@@ -76,7 +79,7 @@ const Registraition = () => {
               <button>Загрузить фото профиля</button>
             </div>
           </div>
-          <button className='reg-form__submit-btn' onClick={() => registration(email, password)}>Зарегистрироваться</button>
+          <button className='reg-form__submit-btn' onClick={() => registration(firstName, secondName, email, password)}>Зарегистрироваться</button>
         </fieldset>
       </div>
     </div>

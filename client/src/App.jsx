@@ -19,7 +19,6 @@ function App() {
     setCoaches(response.results);
     console.log(response.results);
   }
-
     
   useEffect(() => {
     getCoaches();
